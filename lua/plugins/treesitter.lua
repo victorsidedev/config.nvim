@@ -7,21 +7,22 @@ return {
 
 	config = function()
 		local ts = require("nvim-treesitter")
-		ts.setup({})
-		ts.install({
-			"lua",
-			"vim",
-			"vimdoc",
-			"markdown",
-			"markdown_inline",
-		})
-	end,
-
-	init = function()
-		vim.api.nvim_create_autocmd("FileType", {
-			callback = function()
-				pcall(vim.treesitter.start)
-			end,
+		ts.setup({
+			ensure_installed = {
+				"lua",
+				"vim",
+				"vimdoc",
+				"markdown",
+				"markdown_inline",
+				"python",
+			},
+			highlight = {
+				enable = true,
+				additional_vim_regex_highlighting = false,
+			},
+			indent = {
+				enable = true,
+			}
 		})
 	end,
 }

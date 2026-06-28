@@ -34,8 +34,12 @@ return {
 				},
 			})
 
+			vim.lsp.config("basedpyright", {})
+
 			vim.lsp.enable("lua_ls")
+			vim.lsp.enable("basedpyright")
+
 			setup_lsp_keymaps()
 		end,
-	}
+	},
 }
