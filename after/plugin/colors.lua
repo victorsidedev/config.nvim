@@ -4,7 +4,8 @@ function setColorScheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "None" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None" })
+	vim.api.nvim_set_hl(0, "SignColumn", { bg = "None" })
 
 end
 
-setColorScheme()
+--setColorScheme()
