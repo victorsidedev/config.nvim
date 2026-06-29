@@ -1,7 +1,8 @@
-print("loaded keymaps.lua")
+print("loaded keymaps")
 -- shortcut key remaps
 --
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- for moving blocks of code
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

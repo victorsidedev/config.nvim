@@ -15,30 +15,13 @@ local function setup_lsp_keymaps()
 	})
 end
 
+-- mason download language servers
+-- mason-lspconfig bridge plugin scans these language server binaries and automatically executes vim.lsp.enable()
+-- neovim auto configures from lsp/ folder
 return {
-	{
-		"folke/lazydev.nvim",
-		ft = "lua",
-		opts = {},
-	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			vim.lsp.config("lua_ls", {
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" },
-						},
-					},
-				},
-			})
-
-			vim.lsp.config("basedpyright", {})
-
-			vim.lsp.enable("lua_ls")
-			vim.lsp.enable("basedpyright")
-
 			setup_lsp_keymaps()
 		end,
 	},
