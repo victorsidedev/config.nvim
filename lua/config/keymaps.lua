@@ -24,3 +24,7 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- keep visual selection after applying custom indentation
+vim.keymap.set("v", ">", ">gv")
+vim.keymap.set("v", "<", "<gv")

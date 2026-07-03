@@ -1,0 +1,2 @@
+configure screen resize. ( specially for vertical)
+configure the bar form horizontal split, there's none rn
