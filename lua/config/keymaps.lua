@@ -28,3 +28,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- keep visual selection after applying custom indentation
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
+
+
+-- show error floating window
+vim.keymap.set('n', 'ge', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
